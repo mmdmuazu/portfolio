@@ -104,8 +104,8 @@ form {
   max-width: 500px;
   margin: auto;
 }
-form input,
-form textarea {
+input,
+textarea {
   margin: 10px 0;
   padding: 12px;
   border: none;
@@ -141,7 +141,6 @@ footer {
   .navbar ul {
     margin-top: 100px;
     margin-left: -100px;
-
   }
   .navbar ul li {
     margin-left: 10px;

@@ -11,7 +11,7 @@
     <header>
       <nav class="navbar">
         <h2 class="logo">Muhammad</h2>
-        <br>
+        <br />
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -101,11 +101,19 @@
     <!-- Contact -->
     <section id="contact" class="contact">
       <h2>Contact Me</h2>
-      <form id="contact-form">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
+      <form
+        action="https://formspree.io/f/mnnbrrrg"
+        method="POST"
+      >
+      <label> <input type="text" name="name" placeholder="Full name"></label>
+        <label>
+          <input placeholder="Email" type="email" name="email" />
+        </label>
+        <label>
+          <textarea placeholder="write Message here" name="message"></textarea>
+        </label>
+        <!-- your other form fields go here -->
+        <button type="submit">Send</button>
       </form>
     </section>
 
