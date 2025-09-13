@@ -131,15 +131,20 @@ footer {
   margin-top: 50px;
 }
 @media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    position: relative;
+  }
   .hero h1 {
     font-size: 2.5rem;
   }
   .navbar ul {
-    flex-direction: column;
-    align-items: center;
+    margin-top: 100px;
+    margin-left: -100px;
+
   }
   .navbar ul li {
-    margin: 10px 0;
+    margin-left: 10px;
   }
 }
 /* Skills Section */
