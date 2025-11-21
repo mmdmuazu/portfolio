@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* General */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Inter',sans-serif; }
+body { background:#0f172a; color:#e2e8f0; scroll-behavior:smooth; }
+h1,h2,h3 { margin-bottom:15px; }
+.highlight { color:#38bdf8; }
+a { text-decoration:none; color:inherit; }
+
+/* Navbar */
+.navbar { display:flex; justify-content:space-between; align-items:center; padding:20px; background:rgba(15,23,42,0.95); position:fixed; top:0; width:100%; z-index:1000; }
+.navbar .logo { font-weight:700; }
+.navbar ul { display:flex; list-style:none; }
+.navbar ul li { margin-left:20px; }
+.navbar ul li a:hover { color:#38bdf8; }
+.drawer-btn { display:none; font-size:1.5rem; cursor:pointer; }
+
+/* Hero */
+.hero { height:60vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:50px; background: linear-gradient(120deg,#0f172a,#1e293b);}
+.hero h1 { font-size:3rem; }
+.hero p { margin:10px 0 20px; font-size:1.2rem; }
+.btn { background:#38bdf8; color:#0f172a; padding:10px 20px; border-radius:8px; transition:0.3s; }
+.btn:hover { background:#0ea5e9; }
+
+/* Sections */
+section { padding:80px 20px; text-align:center; position:relative; }
+.project-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; margin-top:30px; }
+.card { background:#1e293b; padding:20px; border-radius:12px; transition: transform 0.3s; cursor:pointer; position:relative; }
+.card:hover { transform:translateY(-10px); }
+
+/* Project preview for mobile */
+.project-img { display:none; margin-top:10px; border-radius:10px; width:100%; }
+
+/* Skills */
+.skills-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin-top:20px; }
+.skill { background:#1e293b; padding:12px; text-align:center; font-size:14px; font-weight:500; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); transition: transform 0.2s ease, background 0.2s ease; cursor:pointer; position:relative;}
+.skill:hover { background:#0077cc; color:#fff; transform:scale(1.05); }
+.skill-code { display:none; margin-top:10px; font-family:monospace; font-size:13px; color:#38bdf8; text-align:left; background:#1e293b; padding:10px; border-radius:8px; overflow-x:auto; }
+
+/* Contact */
+form { display:flex; flex-direction:column; max-width:500px; margin:auto; }
+input,textarea { margin:10px 0; padding:12px; border:none; border-radius:8px; width:100%; }
+form button { background:#38bdf8; color:#0f172a; border:none; padding:12px; border-radius:8px; cursor:pointer; transition:0.3s; }
+form button:hover { background:#0ea5e9; }
+
+/* Footer */
+footer { text-align:center; padding:20px; background:#1e293b; margin-top:50px; }
+
+/* Drawer menu for mobile */
+@media (max-width:768px){
+  .navbar ul { display:none; flex-direction:column; width:100%; margin-top:10px; }
+  .drawer-btn { display:block; color:#38bdf8; }
+  .project-grid { grid-template-columns:1fr; gap:15px; }
+  .skills-grid { grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:10px; }
+  input, textarea { font-size:14px; padding:10px; }
+  .hero h1 { font-size:2rem; }
+  .hero p { font-size:1rem; }
+  .btn { padding:8px 16px; font-size:14px; }
+  .project-img { display:block; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <h2 class="logo">Muhammad</h2>
+    <span class="drawer-btn">&#9776;</span>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section id="home" class="hero">
+  <h1>Hi, I'm <span class="highlight">Muhammad</span></h1>
+  <p>Full-Stack Developer | Cybersecurity Enthusiast | Blockchain Explorer</p>
+  <a href="#projects" class="btn">View My Work</a>
+</section>
+
+<!-- About -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>I’m a computer science student and developer passionate about <strong>Web Development, Mobile Apps, Blockchain, and Cybersecurity</strong>. I build full-stack apps, experiment with smart contracts, and love solving problems.</p>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+  <h2>My Projects</h2>
+  <div class="project-grid">
+    <div class="card">
+      <h3>Mining App</h3>
+      <p>A mining web app with referral system inside Telegram Mini Apps.</p>
+      <img class="project-img" src="images/mining-app.png" alt="Mining App">
+    </div>
+    <div class="card">
+      <h3>E-commerce Web App</h3>
+      <p>A modern e-commerce platform with product catalog, shopping cart, and integrated payment system.</p>
+      <img class="project-img" src="images/ecommerce.png" alt="Ecommerce App">
+    </div>
+    <div class="card">
+      <h3>Mobile App</h3>
+      <p>Cross-platform mobile application built with modern UI/UX principles.</p>
+      <img class="project-img" src="images/mobile-app.png" alt="Mobile App">
+    </div>
+    <div class="card">
+      <h3>Crypto Wallet</h3>
+      <p>Multi-purpose wallet supporting Naira & cryptocurrencies.</p>
+      <img class="project-img" src="images/crypto-wallet.png" alt="Crypto Wallet">
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+  <h2>Languages & Tools</h2>
+  <div class="skills-grid">
+    <div class="skill" data-code="&lt;h1&gt;Hello World&lt;/h1&gt;">HTML5
+      <div class="skill-code"></div>
+    </div>
+    <div class="skill" data-code="body { color: black; }">CSS3
+      <div class="skill-code"></div>
+    </div>
+    <div class="skill" data-code="console.log('Hello World');">JavaScript (ES6+)
+      <div class="skill-code"></div>
+    </div>
+    <div class="skill" data-code="const App = () =&gt; &lt;div&gt;Hello&lt;/div&gt;">React.js
+      <div class="skill-code"></div>
+    </div>
+    <div class="skill" data-code="const express = require('express');">Node.js (Express.js)
+      <div class="skill-code"></div>
+    </div>
+    <div class="skill" data-code="print('Hello World')">Python
+      <div class="skill-code"></div>
+    </div>
+    <div class="skill" data-code="from django.shortcuts import render">Django
+      <div class="skill-code"></div>
+    </div>
+    <div class="skill" data-code="from flask import Flask">Flask
+      <div class="skill-code"></div>
+    </div>
+    <div class="skill" data-code="from fastapi import FastAPI">FastAPI
+      <div class="skill-code"></div>
+    </div>
+    <div class="skill" data-code="// React Native code example">React Native
+      <div class="skill-code"></div>
+    </div>
+    <div class="skill" data-code="// Kotlin Example\nfun main() { println('Hello') }">Kotlin / Java
+      <div class="skill-code"></div>
+    </div>
+    <div class="skill" data-code="// Solidity Smart Contract Example\npragma solidity ^0.8.0;">Solidity
+      <div class="skill-code"></div>
+    </div>
+    <div class="skill" data-code="// Ethereum (ERC-20) Example\ncontract Token {}">Ethereum (ERC-20)
+      <div class="skill-code"></div>
+    </div>
+    <div class="skill" data-code="// Cybersecurity / OSINT tools">Cybersecurity & OSINT
+      <div class="skill-code"></div>
+    </div>
+    <div class="skill" data-code="// Linux commands\nls -la\nsudo apt update">Linux (Kali, Ubuntu)
+      <div class="skill-code"></div>
+    </div>
+    <div class="skill" data-code="git clone ...\ngit commit -m 'msg'">Git & GitHub
+      <div class="skill-code"></div>
+    </div>
+    <div class="skill" data-code="// Fetch API\nfetch('/api')">REST APIs
+      <div class="skill-code"></div>
+    </div>
+    <div class="skill" data-code="// Deployment examples\nVercel, Heroku, PythonAnywhere">Deployment
+      <div class="skill-code"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience -->
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="experience-item">
+    <h3>Cleanwave Recycling Nig Ltd – Developer</h3>
+    <p>Developing cross-platform mobile and web applications with React Native and FastAPI. Implementing interactive UI/UX, database management, backend integration, and real-time scalable solutions for recycling management.</p>
+    <span>2024 – Present</span>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <h2>Contact Me</h2>
+  <form id="contact-form" action="https://formspree.io/f/mnnbrrrg" method="POST">
+    <label><input type="text" name="name" placeholder="Full name" required></label>
+    <label><input placeholder="Email" type="email" name="email" required></label>
+    <label><textarea placeholder="Write your message here" name="message" required></textarea></label>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 Muhammad | Built with 💻 & ☕</p>
+</footer>
+
+<script>
+// Drawer toggle
+const drawerBtn = document.querySelector('.drawer-btn');
+const navUl = document.querySelector('.navbar ul');
+drawerBtn.addEventListener('click', () => { navUl.style.display = navUl.style.display==='flex'?'none':'flex'; });
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+  anchor.addEventListener('click', function(e){
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+    if(window.innerWidth <=768) navUl.style.display='none';
+  });
+});
+
+// Contact form alert
+document.getElementById("contact-form").addEventListener("submit", function(e){
+  e.preventDefault();
+  alert("Thanks! Your message has been sent 🚀");
+  this.reset();
+});
+
+// Skills click-to-expand
+const skills = document.querySelectorAll('.skill');
+skills.forEach(skill=>{
+  const codeDiv = skill.querySelector('.skill-code');
+  skill.addEventListener('click', ()=>{
+    codeDiv.style.display = codeDiv.style.display==='block'?'none':'block';
+    codeDiv.innerText = skill.dataset.code;
+  });
+});
+</script>
+</body>
+</html>
